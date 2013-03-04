@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1810" systemVersion="12C60" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CreditCardEntity" representedClassName="CreditCardEntity" syncable="YES">
+        <attribute name="bDefault" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="dExpiration" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sCVV" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="TpvOrderEntity" representedClassName="TpvOrderEntity" syncable="YES">
+        <attribute name="idOrder" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idPaymentOrder" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sPassword" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CreditCardEntity" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="TpvOrderEntity" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="UserEntity" positionX="0" positionY="0" width="128" height="90"/>
+    </elements>
+</model>

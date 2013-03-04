@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[DomicilioPedirPlatoViewController setFC_food:]:DomicilioPedirPlatoViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DomicilioPedirMasIngredientesViewController cellTouched:options:]:DomicilioPedirMasIngredientesViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DomicilioMiPedidoViewController select_oferta:]:DomicilioMiPedidoViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DomicilioPedirViewController loadDailymenusSuccessful:]:DomicilioPedirViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[_NSMA_categoria_number objectAtIndex:0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

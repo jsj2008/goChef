@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
+	<data>
+		<int key="IBDocument.SystemTarget">1536</int>
+		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2840</string>
+		<string key="IBDocument.AppKitVersion">1187.34</string>
+		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+			<string key="NS.object.0">1926</string>
+		</object>
+		<array key="IBDocument.IntegratedClassDependencies">
+			<string>IBProxyObject</string>
+			<string>IBUIButton</string>
+			<string>IBUILabel</string>
+			<string>IBUIView</string>
+		</array>
+		<array key="IBDocument.PluginDependencies">
+			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+		</array>
+		<object class="NSMutableDictionary" key="IBDocument.Metadata">
+			<string key="NS.key.0">PluginDependencyRecalculationVersion</string>
+			<integer value="1" key="NS.object.0"/>
+		</object>
+		<array class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
+			<object class="IBProxyObject" id="372490531">
+				<string key="IBProxiedObjectIdentifier">IBFilesOwner</string>
+				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+			</object>
+			<object class="IBProxyObject" id="975951072">
+				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
+				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+			</object>
+			<object class="IBUIView" id="795942908">
+				<reference key="NSNextResponder"/>
+				<int key="NSvFlags">292</int>
+				<array class="NSMutableArray" key="NSSubviews">
+					<object class="IBUIButton" id="164329282">
+						<reference key="NSNextResponder" ref="795942908"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{13, 17}, {166, 30}}</string>
+						<reference key="NSSuperview" ref="795942908"/>
+						<reference key="NSNextKeyView" ref="512617284"/>
+						<object class="NSColor" key="IBUIBackgroundColor" id="7831576">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MCAwAA</bytes>
+						</object>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<object class="NSColor" key="IBUIHighlightedTitleColor" id="624370666">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+						</object>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+						</object>
+						<object class="NSColor" key="IBUINormalTitleShadowColor" id="634184604">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restaurantes_filtro_desplegable.png</string>
+						</object>
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="976798931">
+							<int key="type">2</int>
+							<int key="size">2</int>
+						</object>
+						<object class="NSFont" key="IBUIFont" id="1021303399">
+							<string key="NSName">Helvetica-Bold</string>
+							<double key="NSSize">18</double>
+							<int key="NSfFlags">16</int>
+						</object>
+					</object>
+					<object class="IBUIButton" id="257701717">
+						<reference key="NSNextResponder" ref="795942908"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{16, 55}, {99, 30}}</string>
+						<reference key="NSSuperview" ref="795942908"/>
+						<reference key="NSNextKeyView" ref="553565920"/>
+						<reference key="IBUIBackgroundColor" ref="7831576"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="624370666"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="634184604"/>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="792254345">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restaurante_filtros_cercania_select.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="792254345"/>
+						<reference key="IBUISelectedImage" ref="792254345"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restaurante_filtros_cercania_normal.png</string>
+						</object>
+						<reference key="IBUIFontDescription" ref="976798931"/>
+						<reference key="IBUIFont" ref="1021303399"/>
+					</object>
+					<object class="IBUIButton" id="553565920">
+						<reference key="NSNextResponder" ref="795942908"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{111, 55}, {99, 30}}</string>
+						<reference key="NSSuperview" ref="795942908"/>
+						<reference key="NSNextKeyView" ref="958180568"/>
+						<reference key="IBUIBackgroundColor" ref="7831576"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="624370666"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="634184604"/>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="4164756">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restaurante_filtros_ofertas_select.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="4164756"/>
+						<reference key="IBUISelectedImage" ref="4164756"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restaurante_filtros_ofertas_normal.png</string>
+						</object>
+						<reference key="IBUIFontDescription" ref="976798931"/>
+						<reference key="IBUIFont" ref="1021303399"/>
+					</object>
+					<object class="IBUIButton" id="958180568">
+						<reference key="NSNextResponder" ref="795942908"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{206, 55}, {99, 30}}</string>
+						<reference key="NSSuperview" ref="795942908"/>
+						<reference key="IBUIBackgroundColor" ref="7831576"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="624370666"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="634184604"/>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="55221909">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restaurante_filtros_descuentos_select.png</string>
+						</object>
+						<reference key="IBUIDisabledImage" ref="55221909"/>
+						<reference key="IBUISelectedImage" ref="55221909"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restaurante_filtros_descuentos_normal.png</string>
+						</object>
+						<reference key="IBUIFontDescription" ref="976798931"/>
+						<reference key="IBUIFont" ref="1021303399"/>
+					</object>
+					<object class="IBUILabel" id="512617284">
+						<reference key="NSNextResponder" ref="795942908"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{24, 21}, {116, 21}}</string>
+						<reference key="NSSuperview" ref="795942908"/>
+						<reference key="NSNextKeyView" ref="448625239"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<int key="IBUIContentMode">7</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<string key="IBUIText">Tipo de Comida</string>
+						<nil key="IBUIHighlightedColor"/>
+						<int key="IBUIBaselineAdjustment">0</int>
+						<float key="IBUIMinimumFontSize">10</float>
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="1008574590">
+							<string key="name">Helvetica</string>
+							<string key="family">Helvetica</string>
+							<int key="traits">0</int>
+							<double key="pointSize">12</double>
+						</object>
+						<object class="NSFont" key="IBUIFont" id="6335016">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">12</double>
+							<int key="NSfFlags">16</int>
+						</object>
+					</object>
+					<object class="IBUIButton" id="448625239">
+						<reference key="NSNextResponder" ref="795942908"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{182, 17}, {125, 30}}</string>
+						<reference key="NSSuperview" ref="795942908"/>
+						<reference key="NSNextKeyView" ref="536742343"/>
+						<reference key="IBUIBackgroundColor" ref="7831576"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="624370666"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="634184604"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">restaurantes_filtro_02_desplegable.png</string>
+						</object>
+						<reference key="IBUIFontDescription" ref="976798931"/>
+						<reference key="IBUIFont" ref="1021303399"/>
+					</object>
+					<object class="IBUILabel" id="536742343">
+						<reference key="NSNextResponder" ref="795942908"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{194, 21}, {74, 21}}</string>
+						<reference key="NSSuperview" ref="795942908"/>
+						<reference key="NSNextKeyView" ref="257701717"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<int key="IBUIContentMode">7</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<string key="IBUIText">Todos</string>
+						<nil key="IBUIHighlightedColor"/>
+						<int key="IBUIBaselineAdjustment">0</int>
+						<float key="IBUIMinimumFontSize">10</float>
+						<reference key="IBUIFontDescription" ref="1008574590"/>
+						<reference key="IBUIFont" ref="6335016"/>
+					</object>
+				</array>
+				<string key="NSFrameSize">{320, 100}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSNextKeyView" ref="164329282"/>
+				<reference key="IBUIBackgroundColor" ref="7831576"/>
+				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+			</object>
+		</array>
+		<object class="IBObjectContainer" key="IBDocument.Objects">
+			<array class="NSMutableArray" key="connectionRecords">
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">view</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="795942908"/>
+					</object>
+					<int key="connectionID">51</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">UIL_tipo_comida</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="512617284"/>
+					</object>
+					<int key="connectionID">87</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">UIB_ofertas</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="553565920"/>
+					</object>
+					<int key="connectionID">88</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">UIB_descuentos</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="958180568"/>
+					</object>
+					<int key="connectionID">89</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">UIB_cercania</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="257701717"/>
+					</object>
+					<int key="connectionID">90</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">UIL_restaurantes</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="536742343"/>
+					</object>
+					<int key="connectionID">98</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">UIB_tipo_comida_TouchUpInside:</string>
+						<reference key="source" ref="164329282"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">94</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">UIB_cercania_TouchUpInside:</string>
+						<reference key="source" ref="257701717"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">91</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">UIB_ofertas_TouchUpInside:</string>
+						<reference key="source" ref="553565920"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">93</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">UIB_descuentos_TouchUpInside:</string>
+						<reference key="source" ref="958180568"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">92</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">UIB_restaurantes_TouchUpInside:</string>
+						<reference key="source" ref="448625239"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">99</int>
+				</object>
+			</array>
+			<object class="IBMutableOrderedSet" key="objectRecords">
+				<array key="orderedObjects">
+					<object class="IBObjectRecord">
+						<int key="objectID">0</int>
+						<array key="object" id="0"/>
+						<reference key="children" ref="1000"/>
+						<nil key="parent"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">-1</int>
+						<reference key="object" ref="372490531"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">File's Owner</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">-2</int>
+						<reference key="object" ref="975951072"/>
+						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">24</int>
+						<reference key="object" ref="795942908"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="257701717"/>
+							<reference ref="553565920"/>
+							<reference ref="958180568"/>
+							<reference ref="164329282"/>
+							<reference ref="512617284"/>
+							<reference ref="448625239"/>
+							<reference ref="536742343"/>
+						</array>
+						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">81</int>
+						<reference key="object" ref="164329282"/>
+						<reference key="parent" ref="795942908"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">83</int>
+						<reference key="object" ref="257701717"/>
+						<reference key="parent" ref="795942908"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">84</int>
+						<reference key="object" ref="553565920"/>
+						<reference key="parent" ref="795942908"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">85</int>
+						<reference key="object" ref="958180568"/>
+						<reference key="parent" ref="795942908"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">95</int>
+						<reference key="object" ref="448625239"/>
+						<reference key="parent" ref="795942908"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">96</int>
+						<reference key="object" ref="536742343"/>
+						<reference key="parent" ref="795942908"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">86</int>
+						<reference key="object" ref="512617284"/>
+						<reference key="parent" ref="795942908"/>
+					</object>
+				</array>
+			</object>
+			<dictionary class="NSMutableDictionary" key="flattenedProperties">
+				<string key="-1.CustomClassName">CustomUITableViewCellBuscarRestauranteHeaderViewController</string>
+				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="-2.CustomClassName">UIResponder</string>
+				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="0.0" key="81.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<string key="83.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="3" key="83.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<string key="84.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="3" key="84.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<string key="85.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="3" key="85.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<string key="86.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="95.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="0.0" key="95.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<string key="96.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+			</dictionary>
+			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
+			<nil key="activeLocalization"/>
+			<dictionary class="NSMutableDictionary" key="localizations"/>
+			<nil key="sourceID"/>
+			<int key="maxID">99</int>
+		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<int key="IBDocument.localizationMode">0</int>
+		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
+		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
+		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="restaurante_filtros_cercania_normal.png">{99, 30}</string>
+			<string key="restaurante_filtros_cercania_select.png">{99, 30}</string>
+			<string key="restaurante_filtros_descuentos_normal.png">{98, 30}</string>
+			<string key="restaurante_filtros_descuentos_select.png">{98, 30}</string>
+			<string key="restaurante_filtros_ofertas_normal.png">{99, 30}</string>
+			<string key="restaurante_filtros_ofertas_select.png">{99, 30}</string>
+			<string key="restaurantes_filtro_02_desplegable.png">{116, 27}</string>
+			<string key="restaurantes_filtro_desplegable.png">{157, 27}</string>
+		</dictionary>
+		<string key="IBCocoaTouchPluginVersion">1926</string>
+	</data>
+</archive>
