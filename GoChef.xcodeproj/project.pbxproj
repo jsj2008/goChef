@@ -21,18 +21,6 @@
 		161FB4E9158BC2F30099CA69 /* ImageClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 161FB4E8158BC2F30099CA69 /* ImageClass.m */; };
 		1624EA8F1586048800B63F87 /* cell_mi_actividad_short_info_reserva_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1624EA8D1586048700B63F87 /* cell_mi_actividad_short_info_reserva_background.png */; };
 		1624EA901586048800B63F87 /* cell_mi_actividad_short_info_reserva_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1624EA8E1586048700B63F87 /* cell_mi_actividad_short_info_reserva_background@2x.png */; };
-		162978DB1573A59F005F37EB /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978BF1573A59F005F37EB /* Facebook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978DC1573A59F005F37EB /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 162978C11573A59F005F37EB /* FBDialog.bundle */; };
-		162978DD1573A59F005F37EB /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978C31573A59F005F37EB /* FBDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978DE1573A59F005F37EB /* FBFrictionlessRequestSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978C51573A59F005F37EB /* FBFrictionlessRequestSettings.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978DF1573A59F005F37EB /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978C71573A59F005F37EB /* FBLoginDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978E01573A59F005F37EB /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978C91573A59F005F37EB /* FBRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978E11573A59F005F37EB /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978CD1573A59F005F37EB /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978E21573A59F005F37EB /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978CF1573A59F005F37EB /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978E31573A59F005F37EB /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978D11573A59F005F37EB /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978E41573A59F005F37EB /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978D31573A59F005F37EB /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978E51573A59F005F37EB /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978D51573A59F005F37EB /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		162978E61573A59F005F37EB /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 162978D71573A59F005F37EB /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		162978EE1573BAB2005F37EB /* topbar_button_edit_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 162978EA1573BAB2005F37EB /* topbar_button_edit_normal.png */; };
 		162978EF1573BAB2005F37EB /* topbar_button_edit_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 162978EB1573BAB2005F37EB /* topbar_button_edit_normal@2x.png */; };
 		162978F01573BAB2005F37EB /* topbar_button_edit_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 162978EC1573BAB2005F37EB /* topbar_button_edit_select.png */; };
@@ -696,6 +684,10 @@
 		B52E9F11169D5DA00002025E /* bag.png in Resources */ = {isa = PBXBuildFile; fileRef = B52E9F0E169D5DA00002025E /* bag.png */; };
 		B52E9F12169D5DA00002025E /* bag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B52E9F0F169D5DA00002025E /* bag@2x.png */; };
 		B52E9F13169D5DA00002025E /* Servicios HTTP GoChef  v1.28.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B52E9F10169D5DA00002025E /* Servicios HTTP GoChef  v1.28.pdf */; };
+		B589E79916E4F350002659AC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B589E79816E4F350002659AC /* FacebookSDK.framework */; };
+		B589E79B16E4F384002659AC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B589E79A16E4F384002659AC /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B589E79D16E4F38A002659AC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B589E79C16E4F38A002659AC /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B589E79F16E4F3B0002659AC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B589E79E16E4F3B0002659AC /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5962BA7169DB30400612023 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5962BA6169DB30400612023 /* QuartzCore.framework */; };
 		B5962BC0169DB38E00612023 /* OCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5962BB8169DB38E00612023 /* OCCalendarView.m */; };
 		B5962BC1169DB38E00612023 /* OCCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5962BBA169DB38E00612023 /* OCCalendarViewController.m */; };
@@ -741,16 +733,6 @@
 		B5FD78901676673F002D7DA3 /* Status_10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FD787A1676673F002D7DA3 /* Status_10@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		162978E81573A59F005F37EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 162978BB1573A59F005F37EB /* facebook-ios-sdk.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = "facebook-ios-sdk";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1611034F1538AE8E009DEA4D /* SelectOfertaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectOfertaViewController.h; sourceTree = "<group>"; };
 		161103501538AE8E009DEA4D /* SelectOfertaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectOfertaViewController.m; sourceTree = "<group>"; };
@@ -770,33 +752,6 @@
 		161FB4E8158BC2F30099CA69 /* ImageClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageClass.m; sourceTree = "<group>"; };
 		1624EA8D1586048700B63F87 /* cell_mi_actividad_short_info_reserva_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_mi_actividad_short_info_reserva_background.png; sourceTree = "<group>"; };
 		1624EA8E1586048700B63F87 /* cell_mi_actividad_short_info_reserva_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_mi_actividad_short_info_reserva_background@2x.png"; sourceTree = "<group>"; };
-		162978BA1573A59F005F37EB /* facebook_ios_sdk_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = facebook_ios_sdk_Prefix.pch; sourceTree = "<group>"; };
-		162978BB1573A59F005F37EB /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
-		162978BE1573A59F005F37EB /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
-		162978BF1573A59F005F37EB /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
-		162978C01573A59F005F37EB /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
-		162978C11573A59F005F37EB /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
-		162978C21573A59F005F37EB /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
-		162978C31573A59F005F37EB /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
-		162978C41573A59F005F37EB /* FBFrictionlessRequestSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFrictionlessRequestSettings.h; sourceTree = "<group>"; };
-		162978C51573A59F005F37EB /* FBFrictionlessRequestSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFrictionlessRequestSettings.m; sourceTree = "<group>"; };
-		162978C61573A59F005F37EB /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
-		162978C71573A59F005F37EB /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
-		162978C81573A59F005F37EB /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
-		162978C91573A59F005F37EB /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
-		162978CB1573A59F005F37EB /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		162978CC1573A59F005F37EB /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		162978CD1573A59F005F37EB /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		162978CE1573A59F005F37EB /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		162978CF1573A59F005F37EB /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
-		162978D01573A59F005F37EB /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		162978D11573A59F005F37EB /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
-		162978D21573A59F005F37EB /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		162978D31573A59F005F37EB /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
-		162978D41573A59F005F37EB /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		162978D51573A59F005F37EB /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		162978D61573A59F005F37EB /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		162978D71573A59F005F37EB /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		162978EA1573BAB2005F37EB /* topbar_button_edit_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbar_button_edit_normal.png; sourceTree = "<group>"; };
 		162978EB1573BAB2005F37EB /* topbar_button_edit_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "topbar_button_edit_normal@2x.png"; sourceTree = "<group>"; };
 		162978EC1573BAB2005F37EB /* topbar_button_edit_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbar_button_edit_select.png; sourceTree = "<group>"; };
@@ -1606,6 +1561,10 @@
 		B52E9F0E169D5DA00002025E /* bag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bag.png; sourceTree = "<group>"; };
 		B52E9F0F169D5DA00002025E /* bag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@2x.png"; sourceTree = "<group>"; };
 		B52E9F10169D5DA00002025E /* Servicios HTTP GoChef  v1.28.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Servicios HTTP GoChef  v1.28.pdf"; sourceTree = "<group>"; };
+		B589E79816E4F350002659AC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		B589E79A16E4F384002659AC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B589E79C16E4F38A002659AC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B589E79E16E4F3B0002659AC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B5962BA6169DB30400612023 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B5962BB7169DB38E00612023 /* OCCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCCalendarView.h; sourceTree = "<group>"; };
 		B5962BB8169DB38E00612023 /* OCCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCCalendarView.m; sourceTree = "<group>"; };
@@ -1667,6 +1626,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B589E79F16E4F3B0002659AC /* Social.framework in Frameworks */,
+				B589E79D16E4F38A002659AC /* Accounts.framework in Frameworks */,
+				B589E79B16E4F384002659AC /* AdSupport.framework in Frameworks */,
 				B5962BA7169DB30400612023 /* QuartzCore.framework in Frameworks */,
 				168771C91610A7CE001A5D14 /* libxml2.2.dylib in Frameworks */,
 				16BFB2321567B4A200507B09 /* CFNetwork.framework in Frameworks */,
@@ -1679,6 +1641,7 @@
 				163265D6152F0F37001994FC /* UIKit.framework in Frameworks */,
 				163265D8152F0F37001994FC /* Foundation.framework in Frameworks */,
 				163265DA152F0F37001994FC /* CoreGraphics.framework in Frameworks */,
+				B589E79916E4F350002659AC /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1737,34 +1700,6 @@
 				16C749C7153842A100D160CC /* ConfirmacionView.xib */,
 			);
 			name = "Mi pedido";
-			sourceTree = "<group>";
-		};
-		162978BC1573A59F005F37EB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				162978E91573A59F005F37EB /* libfacebook_ios_sdk.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		162978CA1573A59F005F37EB /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				162978CB1573A59F005F37EB /* JSON.h */,
-				162978CC1573A59F005F37EB /* NSObject+SBJSON.h */,
-				162978CD1573A59F005F37EB /* NSObject+SBJSON.m */,
-				162978CE1573A59F005F37EB /* NSString+SBJSON.h */,
-				162978CF1573A59F005F37EB /* NSString+SBJSON.m */,
-				162978D01573A59F005F37EB /* SBJSON.h */,
-				162978D11573A59F005F37EB /* SBJSON.m */,
-				162978D21573A59F005F37EB /* SBJsonBase.h */,
-				162978D31573A59F005F37EB /* SBJsonBase.m */,
-				162978D41573A59F005F37EB /* SBJsonParser.h */,
-				162978D51573A59F005F37EB /* SBJsonParser.m */,
-				162978D61573A59F005F37EB /* SBJsonWriter.h */,
-				162978D71573A59F005F37EB /* SBJsonWriter.m */,
-			);
-			path = JSON;
 			sourceTree = "<group>";
 		};
 		162978F21573BAB6005F37EB /* Tarjetas */ = {
@@ -1832,6 +1767,9 @@
 		163265C6152F0F37001994FC = {
 			isa = PBXGroup;
 			children = (
+				B589E79E16E4F3B0002659AC /* Social.framework */,
+				B589E79C16E4F38A002659AC /* Accounts.framework */,
+				B589E79A16E4F384002659AC /* AdSupport.framework */,
 				B5962BA6169DB30400612023 /* QuartzCore.framework */,
 				163265DB152F0F37001994FC /* GoChef */,
 				163265D4152F0F37001994FC /* Frameworks */,
@@ -1850,6 +1788,7 @@
 		163265D4152F0F37001994FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B589E79816E4F350002659AC /* FacebookSDK.framework */,
 				16BFB2311567B4A200507B09 /* CFNetwork.framework */,
 				163266C6152F257B001994FC /* CoreData.framework */,
 				163265D9152F0F37001994FC /* CoreGraphics.framework */,
@@ -1979,7 +1918,6 @@
 			isa = PBXGroup;
 			children = (
 				16BFB21C1567B3FC00507B09 /* Appirater */,
-				16326623152F1777001994FC /* Facebook */,
 				166321521530F52B00A76D77 /* JSONKit */,
 				16AD79FA156CDFF9005ECE60 /* NSData+Base64 */,
 				163B0E16156AC3EB006A9518 /* NSFileManager */,
@@ -2061,28 +1999,6 @@
 				16326637152F17AA001994FC /* Reachability.m */,
 			);
 			name = Reachability;
-			sourceTree = "<group>";
-		};
-		16326623152F1777001994FC /* Facebook */ = {
-			isa = PBXGroup;
-			children = (
-				162978BA1573A59F005F37EB /* facebook_ios_sdk_Prefix.pch */,
-				162978BB1573A59F005F37EB /* facebook-ios-sdk.xcodeproj */,
-				162978BE1573A59F005F37EB /* Facebook.h */,
-				162978BF1573A59F005F37EB /* Facebook.m */,
-				162978C01573A59F005F37EB /* FBConnect.h */,
-				162978C11573A59F005F37EB /* FBDialog.bundle */,
-				162978C21573A59F005F37EB /* FBDialog.h */,
-				162978C31573A59F005F37EB /* FBDialog.m */,
-				162978C41573A59F005F37EB /* FBFrictionlessRequestSettings.h */,
-				162978C51573A59F005F37EB /* FBFrictionlessRequestSettings.m */,
-				162978C61573A59F005F37EB /* FBLoginDialog.h */,
-				162978C71573A59F005F37EB /* FBLoginDialog.m */,
-				162978C81573A59F005F37EB /* FBRequest.h */,
-				162978C91573A59F005F37EB /* FBRequest.m */,
-				162978CA1573A59F005F37EB /* JSON */,
-			);
-			name = Facebook;
 			sourceTree = "<group>";
 		};
 		1632663C152F17CD001994FC /* Custom Component */ = {
@@ -3810,28 +3726,12 @@
 			mainGroup = 163265C6152F0F37001994FC;
 			productRefGroup = 163265D2152F0F37001994FC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 162978BC1573A59F005F37EB /* Products */;
-					ProjectRef = 162978BB1573A59F005F37EB /* facebook-ios-sdk.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				163265D0152F0F37001994FC /* GoChef */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		162978E91573A59F005F37EB /* libfacebook_ios_sdk.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libfacebook_ios_sdk.a;
-			remoteRef = 162978E81573A59F005F37EB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		163265CF152F0F37001994FC /* Resources */ = {
@@ -4174,7 +4074,6 @@
 				164CB1A7157366A6008E3844 /* mi_cuenta_ppal_logout_background@2x.png in Resources */,
 				164CB1A8157366A6008E3844 /* mi_cuenta_sugerencias_background.png in Resources */,
 				164CB1A9157366A6008E3844 /* mi_cuenta_sugerencias_background@2x.png in Resources */,
-				162978DC1573A59F005F37EB /* FBDialog.bundle in Resources */,
 				162978EE1573BAB2005F37EB /* topbar_button_edit_normal.png in Resources */,
 				162978EF1573BAB2005F37EB /* topbar_button_edit_normal@2x.png in Resources */,
 				162978F01573BAB2005F37EB /* topbar_button_edit_select.png in Resources */,
@@ -4511,17 +4410,6 @@
 				16542CDA156E6B4900496F43 /* SearchOfferClass.m in Sources */,
 				16542CE4156ECC8E00496F43 /* OrderClass.m in Sources */,
 				16542CE7156ED9DE00496F43 /* OrderFoodClass.m in Sources */,
-				162978DB1573A59F005F37EB /* Facebook.m in Sources */,
-				162978DD1573A59F005F37EB /* FBDialog.m in Sources */,
-				162978DE1573A59F005F37EB /* FBFrictionlessRequestSettings.m in Sources */,
-				162978DF1573A59F005F37EB /* FBLoginDialog.m in Sources */,
-				162978E01573A59F005F37EB /* FBRequest.m in Sources */,
-				162978E11573A59F005F37EB /* NSObject+SBJSON.m in Sources */,
-				162978E21573A59F005F37EB /* NSString+SBJSON.m in Sources */,
-				162978E31573A59F005F37EB /* SBJSON.m in Sources */,
-				162978E41573A59F005F37EB /* SBJsonBase.m in Sources */,
-				162978E51573A59F005F37EB /* SBJsonParser.m in Sources */,
-				162978E61573A59F005F37EB /* SBJsonWriter.m in Sources */,
 				162979061573BC9D005F37EB /* CustomUITableViewCellCreditCard.m in Sources */,
 				1629790A1573BCBA005F37EB /* CustomUITableViewCellCreditCardViewController.m in Sources */,
 				165E1834157F8CCC00CD6922 /* SelectRestaurantesViewController.m in Sources */,
@@ -4636,12 +4524,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = armv7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoChef/GoChef-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "GoChef/GoChef-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = gochef;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -4652,12 +4548,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = armv7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoChef/GoChef-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "GoChef/GoChef-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = gochef;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -4689,12 +4593,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = armv7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoChef/GoChef-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "GoChef/GoChef-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = gochef;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;

@@ -10,10 +10,9 @@
 #import <Foundation/Foundation.h>
 
 #import "SingletonGlobal.h"
-#import "FBConnect.h"
+#import <FacebookSDK/FacebookSDK.h>
 
-
-@interface FacebookClass : NSObject <FBRequestDelegate, FBDialogDelegate, FBSessionDelegate> {
+@interface FacebookClass : NSObject  {
     
     NSArray *permissions;
     

@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <FacebookSDK/FacebookSDK.h>
 #import "SingletonGlobal.h"
-#import "FBConnect.h"
 
 #import "PrincipalViewController.h"
 #import "HelpViewController.h"
@@ -40,7 +40,7 @@
     
     NSTimer *_NST_timer_chec_new_orders;
     
-    Facebook *facebook;
+    FBSession *facebook;
     NSMutableDictionary *userPermissions;
     
     NSInteger _NSI_active_index;
@@ -103,7 +103,7 @@
 
 @property (nonatomic, retain) NSTimer *NST_timer_chec_new_orders;
 
-@property (nonatomic, retain) Facebook *facebook;
+@property (nonatomic, retain) FBSession *facebook;
 @property (nonatomic, retain) NSMutableDictionary *userPermissions;
 
 @property (nonatomic, readwrite) NSInteger NSI_active_index;

@@ -37,10 +37,10 @@
     
     // Realizamos la consulta
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [[delegate facebook] requestWithMethodName:@"fql.query"
-                                     andParams:params
-                                 andHttpMethod:@"POST"
-                                   andDelegate:self];
+   // [[delegate facebook] requestWithMethodName:@"fql.query"
+   //                                  andParams:params
+   //                              andHttpMethod:@"POST"
+//                               andDelegate:self];
 }
 
 //# ------------------------------------------------------------------------------------------------------------
@@ -65,14 +65,15 @@
     
     // Comprobamos si el usuario ya ha dado permisos para acceder a su PRofile de Facebook
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    if (![[delegate facebook] isSessionValid]) {
+  //  if (![[delegate facebook] isSessionValid]) {
         
         // Iniciamos solicitud de permisos
-        [[delegate facebook] authorize:permissions];
+   //     [[delegate facebook] authorize:permissions];
         
-        return FALSE;
-    }
-    else return TRUE;
+   //     return FALSE;
+   // }
+   // else return TRUE;
+    return  TRUE;
 }
 
 //# ------------------------------------------------------------------------------------------------------------
@@ -100,7 +101,7 @@
 -(void) logoutFacebook {
     
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [[delegate facebook] logout];
+   // [[delegate facebook] logout];
 }
 
 //# ------------------------------------------------------------------------------------------------------------
@@ -120,14 +121,14 @@
     if ([self permissions_accepted]) {
         
         // Recuperamos los datos del usaurio de su Profile de Facebook
-        SBJSON *jsonWriter = [SBJSON new];
+    //    SBJSON *jsonWriter = [SBJSON new];
         
         // The action links to be shown with the post in the feed
         NSArray* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys:NSS_name,@"name",NSS_link,@"link", nil], nil];
-        NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
+     //   NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
         
         // Dialog parameters
-        NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+     /*   NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                        NSS_message,         @"message",
                                        NSS_name,            @"name",
                                        NSS_caption,         @"caption",
@@ -135,14 +136,14 @@
                                        NSS_link,            @"link",
                                        NSS_picture,         @"picture",
                                        actionLinksStr,      @"actions",
-                                       nil];
+                                       nil];*/
         
         AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
-        [[delegate facebook] requestWithGraphPath:@"feed" 
+   /*     [[delegate facebook] requestWithGraphPath:@"feed"
                                         andParams:params 
                                     andHttpMethod:@"POST" 
-                                      andDelegate:self];
+                                      andDelegate:self];*/
         
         
         // Generamos la notificación que indica que se ha de ir a la Navigation Principal
@@ -179,10 +180,8 @@
     
     // Recuperamos los datos del Profile
     [self getFacebookProfileData];
-    
     // Guardamos en el resgitro que el usuairo ha dado permisos de acceso a su Profile
-    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [self storeAuthData:[[delegate facebook] accessToken] expiresAt:[[delegate facebook] expirationDate]];
+    [self storeAuthData:[FBSession activeSession].accessToken expiresAt:[FBSession activeSession].expirationDate];
 }
 
 //# ------------------------------------------------------------------------------------------------------------

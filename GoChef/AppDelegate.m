@@ -637,18 +637,24 @@
     // Iniciamos FacebookClass
     globalVar.FC_facebook = [[FacebookClass alloc] init];
     
-    // Initialize Facebook
-    facebook = [[Facebook alloc] initWithAppId:_FACEBOOK_APP_ID_ andDelegate:globalVar.FC_facebook];
-    
-    // Check and retrieve authorization information
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"FBAccessTokenKey"] && [defaults objectForKey:@"FBExpirationDateKey"]) {
-        facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
-        facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
-    }
-    
     // Initialize user permissions
     userPermissions = [[NSMutableDictionary alloc] initWithCapacity:1];
+    
+    // Initialize Facebook
+    //facebook = [[Facebook alloc] initWithAppId:_FACEBOOK_APP_ID_ andDelegate:globalVar.FC_facebook];
+    //facebook = [[FBSession alloc] initWithAppID:_FACEBOOK_APP_ID_ permissions:[NSArray arrayWithObjects: nil] defaultAudience:FBSessionDefaultAudienceEveryone urlSchemeSuffix:@"" tokenCacheStrategy:(FBSessionTokenCachingStrategy *)
+    
+    facebook = [[FBSession alloc] initWithPermissions:[NSArray arrayWithObjects: nil]];
+                
+    
+    // Check and retrieve authorization information
+   /* NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] && [defaults objectForKey:@"FBExpirationDateKey"]) {
+        [FBSession activeSession].accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }*/
+    
+
     
     // Check App ID:
     // This is really a warning for the developer, this should not
@@ -3076,7 +3082,8 @@
     // it's a good practice to refresh the access token also when the app becomes active.
     // This gives apps that seldom make api calls a higher chance of having a non expired
     // access token.
-    [[self facebook] extendAccessTokenIfNeeded];
+    //[[self facebook] extendAccessTokenIfNeeded];
+    
 }
 
 //# ------------------------------------------------------------------------------------------------------------
