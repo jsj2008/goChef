@@ -17,7 +17,7 @@
 //#
 #define _LOADING_DEFAULT_TEXT_              @"Cargando..."
 
-#define _APP_VERSION_                       @"beta v1.0.45"
+#define _APP_VERSION_                       @"beta v1.0.46"
 
 #define _LIMIT_TO_CHANGE_KM_                10000
     

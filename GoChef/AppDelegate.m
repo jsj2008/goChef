@@ -637,25 +637,6 @@
     // Iniciamos FacebookClass
     globalVar.FC_facebook = [[FacebookClass alloc] init];
     
-    // Initialize user permissions
-    userPermissions = [[NSMutableDictionary alloc] initWithCapacity:1];
-    
-    // Initialize Facebook
-    //facebook = [[Facebook alloc] initWithAppId:_FACEBOOK_APP_ID_ andDelegate:globalVar.FC_facebook];
-    //facebook = [[FBSession alloc] initWithAppID:_FACEBOOK_APP_ID_ permissions:[NSArray arrayWithObjects: nil] defaultAudience:FBSessionDefaultAudienceEveryone urlSchemeSuffix:@"" tokenCacheStrategy:(FBSessionTokenCachingStrategy *)
-    
-    facebook = [[FBSession alloc] initWithPermissions:[NSArray arrayWithObjects: nil]];
-                
-    
-    // Check and retrieve authorization information
-   /* NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"FBAccessTokenKey"] && [defaults objectForKey:@"FBExpirationDateKey"]) {
-        [FBSession activeSession].accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
-        facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
-    }*/
-    
-
-    
     // Check App ID:
     // This is really a warning for the developer, this should not
     // happen in a completed app
@@ -3054,7 +3035,7 @@
     
     // App review
     [Appirater appEnteredForeground:YES];
-    
+        
     // Cancelamos los NSTimers
     [self invalidateAllTimer];
     
@@ -3084,6 +3065,9 @@
     // access token.
     //[[self facebook] extendAccessTokenIfNeeded];
     
+    [FBSession.activeSession handleDidBecomeActive];
+    
+    
 }
 
 //# ------------------------------------------------------------------------------------------------------------
@@ -3105,7 +3089,7 @@
 //#
 -(BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     
-    return [self.facebook handleOpenURL:url];
+    return [FBSession.activeSession handleOpenURL:url];
 }
 
 //# ------------------------------------------------------------------------------------------------------------
@@ -3116,7 +3100,9 @@
 //#
 -(BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     
-    return [self.facebook handleOpenURL:url];
+    return [FBSession.activeSession handleOpenURL:url];
 }
+
+
 
 @end

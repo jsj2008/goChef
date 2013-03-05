@@ -21,17 +21,13 @@
 
 @property (nonatomic, retain) NSArray *permissions;
 
-
 -(void) getFacebookProfileData;
 -(void) loginFacebook;
 -(void) logoutFacebook;
-
 -(void) postInUserWallMessage:(NSString *)NSS_message
                          name:(NSString *)NSS_name
                       caption:(NSString *)NSS_caption 
                   description:(NSString *)NSS_description 
                          link:(NSString *)NSS_link 
                       picture:(NSString *)NSS_picture;
-
-
 @end
