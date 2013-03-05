@@ -3079,6 +3079,8 @@
 //#                   See also applicationDidEnterBackground:.
 //#
 -(void) applicationWillTerminate:(UIApplication *)application {
+    
+    [FBSession.activeSession close];
 }
 
 //# ------------------------------------------------------------------------------------------------------------
