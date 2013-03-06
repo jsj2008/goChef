@@ -48,6 +48,7 @@
 -(void) UMNI_getOrdersDevolution;
 -(void) UMNI_getOrderfood:(OrderClass *)OC_order images:(BOOL)B_download_images;
 -(void) UMNI_setOrder:(OrderClass *)OC_order;
+-(void) UMNI_setOrderCupon:(OrderClass *)OC_order;
 -(void) UMNI_updateOrderStatus:(OrderClass *)OC_order;
 -(void) UMNI_setOrderfood:(OrderFoodClass *)OFC_food idorder:(NSInteger)NSI_idorder;
 -(void) UMNI_sendOrderticket;

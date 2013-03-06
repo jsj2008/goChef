@@ -3,6 +3,7 @@
 //  EFEverde
 //
 
+#import <CommonCrypto/CommonDigest.h>
 #import "JSONparseClass.h"
 #import "JSONKit.h"
 
@@ -29,6 +30,8 @@
 @interface JSONparseClass (Private)
 
 - (NSString *)stringByRemovingControlCharacters: (NSString *)inputString;
+- (NSString *)MD5String:(NSString*)original;
+
 
 @end
 
@@ -3281,6 +3284,140 @@
     }
 }
 
+-(void) UMNI_setOrderCupon:(OrderClass *)OC_order{
+
+    // Referenciamos Singleton Object
+    globalVar = [SingletonGlobal sharedGlobal];
+    
+    // Construimos el URLString
+    NSMutableString *NSMS_url = [[NSMutableString alloc] init];
+    
+    // Insertamos la base de la consulta
+    [NSMS_url appendString:[NSString stringWithFormat:@"%@a=setordercupon&idprovider=%@", _HTTP_DOMINIO_SERVICIOS_, _UMNI_ID_PROVIDER_]];
+    
+    // Insertamos los parametros fijos
+    [NSMS_url appendString:[NSString stringWithFormat:@"&iduser=%d",        globalVar.UC_user.NSI_id]];
+    [NSMS_url appendString:[NSString stringWithFormat:@"&idrestaurant=%d",  OC_order.RC_restaurant.NSI_idrestaurant]];
+    
+    [NSMS_url appendString:[NSString stringWithFormat:@"&status=%d",        OC_order.TOS_status]];
+    
+    [NSMS_url appendString:[NSString stringWithFormat:@"&type=%d",          OC_order.TOT_type]];
+    [NSMS_url appendString:[NSString stringWithFormat:@"&active=%d",        OC_order.TOA_active]];
+    
+    // Comprobamos si tiene una Offer
+    if (OC_order.NSI_idorder != _ID_ORDER_NO_VALUE_) {
+        
+        // Insertamos parametros relacionados
+        [NSMS_url appendString:[NSString stringWithFormat:@"&idorder=%d",  OC_order.NSI_idorder]];
+    }
+    
+    // Comprobamos si tiene una Facebook Offer
+    if (OC_order.NSI_idoffer_facebook != _ID_FACEBOOK_OFFER_NO_SELECCIONADA_) {
+        
+        // Insertamos parametros relacionados
+        [NSMS_url appendString:[NSString stringWithFormat:@"&idoffer_facebook=%d",  OC_order.NSI_idoffer_facebook]];
+        [NSMS_url appendString:[NSString stringWithFormat:@"&facebook_discount=%.2f", OC_order.CGF_facebook_discount]];
+    }
+    
+    // Comprobamos si tiene una Offer
+    if (OC_order.OC_offer.NSI_idoffer != _ID_OFFER_NO_SELECTED_) {
+        
+        // Insertamos parametros relacionados
+        [NSMS_url appendString:[NSString stringWithFormat:@"&idoffer=%d",          OC_order.OC_offer.NSI_idoffer]];
+        [NSMS_url appendString:[NSString stringWithFormat:@"&offer_discount=%.2f", OC_order.CGF_offer_discount]];
+    }
+    
+    // Comprobamos si tiene una Tarjeta
+    if (OC_order.TC_creditcard.NSI_id != _ID_CREDITCARD_NO_SELECTED_) {
+        
+        [NSMS_url appendString:[NSString stringWithFormat:@"&number_creditcard=%@", [self MD5String:OC_order.TC_creditcard.NSS_number]]];
+        [NSMS_url appendString:[NSString stringWithFormat:@"&type_creditcard=%@", OC_order.TC_creditcard.NSS_type]];
+        
+        if ([[tpvDAO sharedInstance] paymentId]) {
+            [NSMS_url appendString:[NSString stringWithFormat:@"&idorder_tpv=%@", [[tpvDAO sharedInstance] paymentId]]];
+        }
+    }
+    
+    // Comprobamos que no sea una reserva
+    if (OC_order.TOT_type != TOT_reserva) {
+        
+        // Insertamos valores monetarios
+        [NSMS_url appendString:[NSString stringWithFormat:@"&subtotal=%.2f",            OC_order.CGF_subtotal]];
+        [NSMS_url appendString:[NSString stringWithFormat:@"&membership_discount=%.2f", OC_order.CGF_membership_discount]];
+        [NSMS_url appendString:[NSString stringWithFormat:@"&total=%.2f",               OC_order.CGF_total]];
+        
+        // Insertamos los parametros variables
+        if (OC_order.TOT_type == TOT_pedido_a_domicilio) {
+            
+            [NSMS_url appendString:[NSString stringWithFormat:@"&iduseraddress=%d",        OC_order.DC_useraddress.NSI_id]];
+            [NSMS_url appendString:[NSString stringWithFormat:@"&price_homedelivery=%.2f", OC_order.CGF_price_homedelivery]];
+        }
+        else if (OC_order.TOT_type == TOT_pedido_en_el_restaurante) {
+            
+            [NSMS_url appendString:[NSString stringWithFormat:@"&number_table=%d", OC_order.NSI_number_table]];
+        }
+        else if (OC_order.TOT_type == TOT_pedido_antes_de_ir_al_restaurante) {
+            
+            // Actualizamos UILabel Fecha
+            NSDateFormatter *NSDF_date = [[NSDateFormatter alloc] init];
+            [NSDF_date setDateFormat:@"HH:mm"];
+            NSString *NSS_date = [NSDF_date stringFromDate:OC_order.NSD_date_reservation];
+            
+            // Insertamos los parametros variables
+            [NSMS_url appendString:[NSString stringWithFormat:@"&date_reservation=%@", NSS_date]];
+            [NSMS_url appendString:[NSString stringWithFormat:@"&persons=%d",          OC_order.NSI_persons]];
+        }
+        
+        // comprobamos si hay instrucciones
+        if ([OC_order.NSS_instructions length] != 0) {
+            
+            [NSMS_url appendString:[NSString stringWithFormat:@"&instructions=%@", [globalVar urlEncodeValue:OC_order.NSS_instructions]]];
+        }
+    }
+    else {
+        
+        // Actualizamos UILabel Fecha
+        NSDateFormatter *NSDF_date = [[NSDateFormatter alloc] init];
+        [NSDF_date setDateFormat:@"yyyy-MM-dd HH:mm"];
+        NSString *NSS_date = [NSDF_date stringFromDate:OC_order.NSD_date_reservation];
+        
+        // Insertamos los parametros variables
+        [NSMS_url appendString:[NSString stringWithFormat:@"&date_reservation=%@", [globalVar urlEncodeValue:NSS_date]]];
+        [NSMS_url appendString:[NSString stringWithFormat:@"&persons=%d",          OC_order.NSI_persons]];
+        [NSMS_url appendString:@"&total=0"];
+    }
+    
+    // Mostramos log
+    if ((BOOL)_SHOW_LOG_) NSLog(@"%@", NSMS_url);
+    
+    // Realizamos la consulta
+    NSURLRequest *NSURLR_request = [NSURLRequest requestWithURL:[NSURL URLWithString:NSMS_url]];
+    NSData *NSD_data = [NSURLConnection sendSynchronousRequest:NSURLR_request returningResponse:nil error:nil];
+    
+    // Verificamos que el fichero se ha podido cargar correctamente
+    if (NSD_data == nil) {
+        NSLog(@"Error cargando URL %@", NSMS_url);
+        // Guardamos mensaje de error
+        [globalVar setNSS_msg_error:_ALERT_MSG_UMNI_ERROR_default_];
+        // Lazamos la notificación de error
+        
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"cuponValidationResultKo" object:self];
+    }
+    else {
+        
+        // Parseamos el Json data
+        NSError* NSE_error;
+        NSDictionary* NSD_parse;
+        Class jsonSerializationClass = NSClassFromString(@"NSJSONSerialization");
+        if (!jsonSerializationClass) NSD_parse = [NSD_data objectFromJSONData];
+        else NSD_parse = [NSJSONSerialization JSONObjectWithData:NSD_data options:kNilOptions error:&NSE_error];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"cuponValidationResultOk" object:NSD_parse];
+    }
+}
+
+
 //# ------------------------------------------------------------------------------------------------------------
 //#	Procedimiento   : UMNI_updateOrderStatus
 //#	Fecha Creación	: 01/12/2012  (iMario)
@@ -4486,6 +4623,21 @@
         return mutable;
     }
     return inputString;
+}
+
+- (NSString *)MD5String:(NSString*)original {
+    
+    const char *cstr = [original UTF8String];
+    unsigned char result[16];
+    CC_MD5(cstr, strlen(cstr), result);
+    
+    return [NSString stringWithFormat:
+            @"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
+            result[0], result[1], result[2], result[3],
+            result[4], result[5], result[6], result[7],
+            result[8], result[9], result[10], result[11],
+            result[12], result[13], result[14], result[15]
+            ];  
 }
 
 

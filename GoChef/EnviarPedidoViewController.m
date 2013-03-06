@@ -17,6 +17,14 @@
 #import "DailymenuClass.h"
 #import "RestaurantClass.h"
 #import "UserClass.h"
+#import "JSONparseClass.h"
+
+@interface  EnviarPedidoViewController (Private)
+
+-(void) cuponValidationResultOk:(NSNotification*)note;
+-(void) cuponValidationResultKo;
+
+@end
 
 
 @implementation EnviarPedidoViewController
@@ -52,6 +60,8 @@
 @synthesize TAVC_alta_tarjeta = _TAVC_alta_tarjeta;
 @synthesize CVC_confirmar     = _CVC_confirmar;
 @synthesize STVC_tarjeta      = _STVC_tarjeta;
+
+@synthesize cupponTextField = _cupponTextField;
 
 #pragma mark -
 #pragma mark Properties
@@ -247,7 +257,7 @@
         [UISV_scroll addSubview:UIV_recoger];
         
         // Posicionamos View
-        [UIV_recoger setFrame:CGRectMake(0.0f, 340.0f, UIV_recoger.frame.size.width, UIV_recoger.frame.size.height)];
+        [UIV_recoger setFrame:CGRectMake(0.0f, 370.0f, UIV_recoger.frame.size.width, UIV_recoger.frame.size.height)];
     }
     else {
         
@@ -255,7 +265,7 @@
         [UISV_scroll addSubview:UIV_domicilio];
         
         // Posicionamos View
-        [UIV_domicilio setFrame:CGRectMake(0.0f, 340.0f, UIV_domicilio.frame.size.width, UIV_domicilio.frame.size.height)];
+        [UIV_domicilio setFrame:CGRectMake(0.0f, 370.0f, UIV_domicilio.frame.size.width, UIV_domicilio.frame.size.height)];
     }
     
     NSMutableArray *NSMA_menus = [[NSMutableArray alloc] init];
@@ -494,14 +504,14 @@
     }
     
     // Comprobamos si ya esta en el estado que debe
-    if ( (UIB_tarjeta.selected) && (UIV_resumen.frame.origin.y == 340.0f) ) return;
+    if ( (UIB_tarjeta.selected) && (UIV_resumen.frame.origin.y == 370.0f) ) return;
     
     // Iniciamos animacion
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:_ANIMATION_SHOW_TABBAR_DURATION_];
     
     // Comprobamos si debemos mostrar o ocultar la tarjeta info
-    if (UIV_resumen.frame.origin.y == 340.0f) {
+    if (UIV_resumen.frame.origin.y == 370.0f) {
 
         // Reposicionamos los View
         [UIV_resumen setFrame:CGRectMake(0.0f, 257.0f, UIV_resumen.frame.size.width, UIV_resumen.frame.size.height)];
@@ -512,7 +522,7 @@
     else {
         
         // Reposicionamos los View
-        [UIV_resumen setFrame:CGRectMake(0.0f, 340.0f, UIV_resumen.frame.size.width, UIV_resumen.frame.size.height)];
+        [UIV_resumen setFrame:CGRectMake(0.0f, 370.0f, UIV_resumen.frame.size.width, UIV_resumen.frame.size.height)];
         
         // Ocultamos UIImage
         [UIIV_tarjeta setAlpha:1.0f];
@@ -1146,4 +1156,65 @@
 }
 
 
+#pragma mark - IBActions
+
+-(IBAction) validateDiscountCuppon:(id)sender{
+    
+    // Comprobamos que si se ha seleccionado pago con tarjeta
+    if (UIB_tarjeta.selected) {
+        
+        // Quitamos los posibles espacios
+        NSString *NSS_tarjeta = [UIL_tarjeta.text stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        // Comprobamos si no se ha seleccionado una tarjeta
+        if ([NSS_tarjeta isEqualToString:@"Ninguna seleccionada"]) {
+            
+            // Mostramos el error
+            [globalVar showAlerMsgWith:@"Error"
+                               message:@"Debe seleccionar una tarjeta"];
+            return;
+        }
+        
+        // Comprobamos si la tarjeta tiene el CVV
+        if ([globalVar.OC_order.TC_creditcard.NSS_cvv isEqualToString:_CVV_CREDIT_CARD_NULL]) {
+            
+            // Mostramos el error
+            [globalVar showAlerMsgWith:@"Error"
+                               message:@"Los datos de la tarjeta seleccionada están incompletos. Complete la información pendiente y vuelva a intentarlo."];
+            return;
+        }
+        
+        if ([self.cupponTextField.text isEqualToString:@""]) {
+            // Mostramos el error
+            [globalVar showAlerMsgWith:@"Error"
+                               message:@"Debe indicar un código de cupón para que pueda ser validado antes de ser aplicacdo a este pedido."];
+            return;
+        }
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cuponValidationResultOk:) name:@"cuponValidationResultOk" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cuponValidationResultKo) name:@"cuponValidationResultKo" object:nil];
+        [globalVar.JPC_json UMNI_setOrderCupon:globalVar.OC_order];
+    }
+
+}
+
+#pragma mark - private methods
+
+-(void) cuponValidationResultOk:(NSNotification*)note{
+    
+    NSDictionary *dict = (NSDictionary*)note.object;
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"cuponValidationResultOk"  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"cuponValidationResultKo"  object:nil];
+}
+-(void) cuponValidationResultKo{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"cuponValidationResultOk"  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"cuponValidationResultKo"  object:nil];
+    // Mostramos el error
+    [globalVar showAlerMsgWith:@"Error"
+                       message:@"Se ha producidoun error al validar su cupón, vuelva a intentarlo otra vez."];
+    return;
+
+}
 @end

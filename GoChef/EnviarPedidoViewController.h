@@ -33,7 +33,7 @@
     IBOutlet UITextField *UITF_direccion_info;
     
     IBOutlet UIView *UIV_contenido;
-    IBOutlet UIImageView *UIIV_tarjeta;
+    IBOutlet UIButton *UIIV_tarjeta;
     
     IBOutlet UILabel *UIL_domicilio_subtotal;
     IBOutlet UILabel *UIL_domicilio_descuento;
@@ -76,9 +76,10 @@
 
 @property (nonatomic, retain) UITextField *UITF_telefono;
 @property (nonatomic, retain) UITextField *UITF_direccion_info;
+@property (nonatomic, retain) IBOutlet UITextField *cupponTextField;
 
 @property (nonatomic, retain) UIView *UIV_contenido;
-@property (nonatomic, retain) UIImageView *UIIV_tarjeta;
+@property (nonatomic, retain) UIButton *UIIV_tarjeta;
 
 @property (nonatomic, retain) UILabel *UIL_domicilio_subtotal;
 @property (nonatomic, retain) UILabel *UIL_domicilio_descuento;
@@ -114,5 +115,7 @@
 -(IBAction) UIB_filtro_efectivo_TouchUpInside :(id)sender;
 -(IBAction) UIB_filtro_tarjeta_TouchUpInside  :(id)sender;
 -(IBAction) UIB_hide_keyboard                 :(id)sender;
+
+-(IBAction) validateDiscountCuppon:(id)sender;
 
 @end
