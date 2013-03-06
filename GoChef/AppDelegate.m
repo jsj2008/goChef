@@ -582,6 +582,9 @@
     // Actualizamos Profile
     [globalVar.UC_user setNSS_token:globalVar.NSS_deviceToken];
     
+    // Update user data with token
+    [globalVar.LVC_loading updateUser];
+    
     // Mostramos Log
 	NSLog(@"MY APNS TOKEN IS: %@", globalVar.NSS_deviceToken);
 }
