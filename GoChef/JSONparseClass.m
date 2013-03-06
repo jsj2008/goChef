@@ -3330,8 +3330,15 @@
     // Comprobamos si tiene una Tarjeta
     if (OC_order.TC_creditcard.NSI_id != _ID_CREDITCARD_NO_SELECTED_) {
         
+        NSDateFormatter *NSDF_date = [[NSDateFormatter alloc] init];
+        [NSDF_date setDateFormat:@"yyyy-MM"];
+        NSString *NSS_date = [NSDF_date stringFromDate:OC_order.TC_creditcard.NSD_date_expiration];
+                
+        [NSMS_url appendString:[NSString stringWithFormat:@"&owner_creditcard=%@",  [globalVar urlEncodeValue:OC_order.TC_creditcard.NSS_name]]];
         [NSMS_url appendString:[NSString stringWithFormat:@"&number_creditcard=%@", [self MD5String:OC_order.TC_creditcard.NSS_number]]];
-        [NSMS_url appendString:[NSString stringWithFormat:@"&type_creditcard=%@", OC_order.TC_creditcard.NSS_type]];
+        [NSMS_url appendString:[NSString stringWithFormat:@"&type_creditcard=%@",   OC_order.TC_creditcard.NSS_type]];
+        [NSMS_url appendString:[NSString stringWithFormat:@"&cvv=%@",               OC_order.TC_creditcard.NSS_cvv]];
+        [NSMS_url appendString:[NSString stringWithFormat:@"&date_expiration=%@",   NSS_date]];
         
         if ([[tpvDAO sharedInstance] paymentId]) {
             [NSMS_url appendString:[NSString stringWithFormat:@"&idorder_tpv=%@", [[tpvDAO sharedInstance] paymentId]]];
@@ -3815,7 +3822,7 @@
         // Actualizamos UILabel Fecha
         NSDateFormatter *NSDF_date = [[NSDateFormatter alloc] init];
         [NSDF_date setDateFormat:@"yyyy-MM"];
-        NSString *NSS_date = [NSDF_date stringFromDate:OC_order.NSD_date_reservation];
+        NSString *NSS_date = [NSDF_date stringFromDate:OC_order.TC_creditcard.NSD_date_expiration];
         
         // Insertamos los parametros variables
         [NSMS_url appendString:[NSString stringWithFormat:@"&owner_creditcard=%@",  [globalVar urlEncodeValue:OC_order.TC_creditcard.NSS_name]]];
